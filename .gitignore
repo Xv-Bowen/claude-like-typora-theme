@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+Image/*-raw.png
+dist/
+official-submission/

@@ -1,48 +1,114 @@
 # Claude-like Typora Theme
 
-一套受 Claude 阅读体验启发、为 Typora 精心打磨的明暗双主题。它使用温暖的中性色、克制的陶土色强调和舒展的排版，让中文长文、技术笔记与 Markdown 文档保持安静而清晰的阅读节奏。
+[简体中文](README.zh-CN.md) · English
 
-> [English version](#english)
+A carefully engineered light-and-dark theme pair for Typora, inspired by the calm reading experience associated with Claude. Warm neutrals, restrained clay accents, and a complete application-shell treatment create a writing space that feels quiet without feeling unfinished.
 
-## 预览
+This is more than a document color preset. Each variant contains roughly 3,400 lines of CSS covering typography, Markdown components, technical writing, navigation, editing modes, window chrome, responsive behavior, and print output.
+
+## Preview
 
 ### Claude Light
 
-![Claude Light 主题预览](Image/claude-light-preview.jpg)
+![Claude Light preview](Image/claude-light-preview.png)
 
 ### Claude Dark
 
-![Claude Dark 主题预览](Image/claude-dark-preview.jpg)
+![Claude Dark preview](Image/claude-dark-preview.png)
 
-## 特色
+## At a glance
 
-- 提供 `Claude Light` 与 `Claude Dark` 两套协调一致的主题。
-- 针对中文与中英文混排优化正文宽度、行距和标题层级。
-- 完整适配 Typora 的文件树、目录、搜索、页签和一体化窗口。
-- 统一表格、任务列表、引用、链接、脚注、目录与 YAML 元数据样式。
-- 为行内代码、代码块、语言标签和语法高亮提供低干扰的视觉系统。
-- 优化 Mermaid、数学公式、提示块和打印场景。
-- 仅使用系统字体栈，不依赖网络字体或额外资源。
+| Area | What is included |
+| --- | --- |
+| Theme variants | Independently tuned light and dark palettes |
+| Reading | 752 px content column, 1.72 line height, balanced headings and paragraphs |
+| Markdown | Lists, tasks, tables, quotes, links, footnotes, TOC, YAML metadata |
+| Technical writing | Inline code, fenced code, language labels, syntax highlighting, math, Mermaid |
+| GFM content | Note, tip, important, warning, and caution alert blocks |
+| Typora UI | Tabs, file list, file tree, outline, search, footer, menus, preferences, export panels |
+| Editing modes | Source mode, focus mode, and typewriter mode refinements |
+| Output | Print/PDF rules, page-break protection, and exact color handling |
+| Accessibility | Visible focus states, readable contrast, responsive breakpoints, reduced-motion support |
+| Dependencies | No CDN, web font, image, or network dependency in the theme CSS |
 
-## 安装
+## Why this theme feels different
 
-1. 下载本仓库，或从 `Theme` 目录取得以下文件：
-   - `claude-light.css`
-   - `claude-dark.css`
-2. 打开 Typora，进入 `设置 / 偏好设置 → 外观 → 打开主题文件夹`。
-3. 将两个 CSS 文件复制到 Typora 主题文件夹。
-4. 重启 Typora。
-5. 从“主题”菜单选择 `Claude Light` 或 `Claude Dark`。
+### Two palettes, not one palette inverted
 
-Typora 默认主题目录：
+Claude Light and Claude Dark share the same visual language, but their surfaces, borders, syntax colors, selections, shadows, and muted text are tuned independently. Dark mode uses warm charcoal rather than pure black; light mode uses a soft off-white rather than a stark white canvas.
 
-| 平台 | 路径 |
+| Token | Claude Light | Claude Dark |
+| --- | --- | --- |
+| Canvas | `#f9f9f7` | `#2d2d2b` |
+| Raised surface | `#ffffff` | `#3d3d3a` |
+| Primary text | `#2d2d2b` | `#f9f9f7` |
+| Shared accent | `#cc7d5e` | `#cc7d5e` |
+
+### Typography designed for sustained reading
+
+The writing area uses a stable 752 px measure, generous line height, careful paragraph spacing, and a restrained heading scale. Chinese and mixed Chinese-English documents remain compact enough to scan while still having room to breathe.
+
+The theme uses a system-first UI font stack and prefers JetBrains Mono for code when it is installed. Every font has local fallbacks, so the theme remains fully usable offline without bundling third-party font files.
+
+### A complete Markdown component system
+
+Common elements are treated as one coherent system rather than unrelated patches:
+
+- headings from H1 through H6 with balanced wrapping;
+- emphasis, deletion, underline, selection, and wavy highlight states;
+- ordered, unordered, nested, and task lists with custom checkboxes;
+- tables with deliberate header hierarchy, row feedback, borders, and editing controls;
+- blockquotes and all five GitHub-style alert types;
+- links, footnotes, table of contents, horizontal rules, and YAML metadata;
+- images, figures, audio, video, embedded content, math, and diagrams.
+
+### Code that belongs in the document
+
+Inline code uses a lightweight label treatment. Fenced code blocks have their own surface, border, language label, focused state, and syntax palette. Source mode reuses the same visual logic so moving between rendered writing and Markdown source feels continuous.
+
+The syntax system distinguishes comments, keywords, strings, numbers, tags, definitions, variables, and default code text without turning a document into an over-saturated IDE.
+
+### Typora itself is part of the theme
+
+The theme continues beyond `#write` and styles the surrounding application:
+
+- top tabs, footer panels, context menus, scrollbars, and inputs;
+- file list, file tree, root node, folder states, search results, and file indicators;
+- outline hierarchy with connector lines, filtering, hover, and active states;
+- in-document TOC with full-row interaction and readable hierarchy;
+- integrated title bar, macOS traffic-light spacing, and Windows unibody adjustments;
+- open/export interactions, preferences shell, and integrated menu refinements.
+
+Subtle menu, tree, and panel transitions are included, while `prefers-reduced-motion` disables non-essential motion for users who request it.
+
+### Thoughtful export and small-window behavior
+
+Print rules preserve color, avoid breaking tables and code blocks across pages where possible, and keep headings with the content that follows them. Responsive breakpoints at 1440, 1200, 992, 768, and 720 px progressively protect the writing column and application layout on smaller windows.
+
+## Installation
+
+### Download the release
+
+1. Open the [latest release](https://github.com/Xv-Bowen/claude-like-typora-theme/releases/latest).
+2. Download and extract `claude-like-typora-theme-v1.0.0.zip`.
+3. In Typora, open `Preferences → Appearance → Open Theme Folder`.
+4. Copy `claude-light.css` and `claude-dark.css` into that folder.
+5. Restart Typora.
+6. Select `Claude Light` or `Claude Dark` from the Themes menu.
+
+### Install from the repository
+
+Copy the two files from [`Theme/`](Theme/) directly into Typora's theme folder, then restart Typora.
+
+| Platform | Default theme folder |
 | --- | --- |
 | macOS | `~/Library/Application Support/abnerworks.Typora/themes` |
 | Windows | `%APPDATA%\Typora\themes` |
 | Linux | `~/.config/Typora/themes` |
 
-## 仓库结构
+No resource folder is required. Both CSS files are self-contained.
+
+## Included files
 
 ```text
 .
@@ -50,55 +116,42 @@ Typora 默认主题目录：
 │   ├── claude-light.css
 │   └── claude-dark.css
 ├── Image/
-│   ├── claude-light-preview.jpg
-│   └── claude-dark-preview.jpg
+│   ├── claude-light-preview.png
+│   ├── claude-dark-preview.png
+│   └── claude-like-xv-bowen-thumbnail.png
+├── docs/
+│   └── CUSTOMIZATION.md
+├── CHANGELOG.md
+├── LICENSE
+├── README.md
+├── README.zh-CN.md
 └── preview.md
 ```
 
-`preview.md` 是用于快速检查常见 Markdown 元素显示效果的示例文档。
+[`preview.md`](preview.md) is a reusable visual test document covering long-form text, alerts, tables, tasks, code, math, Mermaid, and footnotes.
 
-## 兼容性
+## Customization
 
-主题面向当前桌面版 Typora 设计，并包含 macOS 与 Windows 一体化窗口的适配。Typora 后续版本如果调整界面结构，部分非文档区域的样式可能需要同步更新。
+Typora loads `base.user.css` and theme-specific user CSS after the selected theme. This lets you change the accent, fonts, content width, or spacing without editing the distributed theme files.
 
-## 许可
+See the [customization guide](docs/CUSTOMIZATION.md) for copy-ready examples.
 
-本项目采用 [MIT License](LICENSE) 开源。
+## Compatibility and testing
 
-## 商标说明
+- Designed and visually verified on macOS with the current desktop version of Typora.
+- Includes explicit macOS integrated-window and traffic-light treatment.
+- Includes Windows unibody selectors and multiple responsive breakpoints.
+- Windows and Linux are not yet fully regression-tested; issue reports and screenshots are welcome.
+- The theme relies on Typora's application DOM, so future Typora releases may require selector updates outside the document area.
 
-Claude 是 Anthropic, PBC 的商标。本项目是独立的社区主题，与 Anthropic 无关联，也未获得其官方授权或认可。“Claude-like”仅表示视觉与阅读体验上的灵感来源。
+## Feedback and contributions
 
----
+Bug reports should include your Typora version, operating system, active theme variant, a screenshot, and a small Markdown sample when possible. Pull requests are welcome when they keep the light and dark variants visually aligned.
 
-<a id="english"></a>
+## License
 
-## English
+Theme code and repository documentation are released under the [MIT License](LICENSE).
 
-A polished light-and-dark theme pair for Typora, inspired by Claude's calm reading experience. Warm neutrals, restrained clay accents, and generous typography keep long-form writing and technical Markdown quiet, clear, and comfortable.
+## Trademark notice
 
-### Highlights
-
-- Coordinated `Claude Light` and `Claude Dark` variants.
-- Typography tuned for Chinese and mixed Chinese-English documents.
-- Refined file tree, outline, search, tabs, and integrated window chrome.
-- Consistent tables, task lists, blockquotes, links, footnotes, TOC, and YAML metadata.
-- Purpose-built inline code, fenced code blocks, language labels, and syntax colors.
-- Styling for Mermaid, math, alerts, and print layouts.
-- System-font-only setup with no external font or network dependency.
-
-### Installation
-
-1. Download the repository, or get `claude-light.css` and `claude-dark.css` from `Theme`.
-2. In Typora, open `Preferences → Appearance → Open Theme Folder`.
-3. Copy both CSS files into the theme folder.
-4. Restart Typora.
-5. Select `Claude Light` or `Claude Dark` from the Themes menu.
-
-### License
-
-Released under the [MIT License](LICENSE).
-
-### Trademark notice
-
-Claude is a trademark of Anthropic, PBC. This independent community theme is not affiliated with, endorsed by, or sponsored by Anthropic. “Claude-like” refers only to its visual and reading-experience inspiration.
+Claude is a trademark of Anthropic, PBC. This independent community theme is not affiliated with, endorsed by, or sponsored by Anthropic. “Claude-like” describes only its visual and reading-experience inspiration.
