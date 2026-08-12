@@ -1,53 +1,66 @@
-# Claude-like Typora Theme
+# Claude-like Typora
 
-> 一套安静、温暖、适合长时间阅读与写作的 Typora 主题。
+> Warm, focused, beautifully quiet — 为长时间写作而生。
 
-## 阅读体验
+## 让注意力回到内容本身
 
-Claude-like Theme 以低饱和的中性色为底，使用克制的陶土色作为视觉强调。舒展的行距与稳定的内容宽度，让中文长文和 mixed English content 都保持清晰的阅读节奏。
+Claude-like 是一套为 Typora 深度打磨的明暗双主题。温暖的中性色、克制的陶土色强调与舒展的排版，共同营造出安静、可信、适合持续阅读的写作空间。
 
-文字可以包含 **重点内容**、*轻量强调*、~~删除说明~~、==高亮片段==，也可以使用 `inline code` 标记命令或变量。
+它不只是改变文档的颜色，也重新整理了正文、标题、表格、代码、提示块与应用界面的视觉关系，让中文长文和 mixed English content 都拥有自然、稳定的阅读节奏。
 
 > [!NOTE]
-> 主题同时优化了提示块、表格、代码、任务列表和文档导航。
+> Claude Light 与 Claude Dark 分别调校，并非简单反色；两套主题都保持清晰的层级、柔和的对比和一致的交互反馈。
 
-## 功能概览
+## 每个细节都服务于阅读
 
-| 模块 | 设计目标 | 状态 |
+| 体验 | 精心处理的细节 | 状态 |
 | --- | --- | :---: |
-| 正文与标题 | 清楚的层级和舒适的留白 | ✓ |
-| 代码与表格 | 稳定、克制、易于扫描 | ✓ |
-| 侧栏与目录 | 与文档区域保持统一 | ✓ |
+| 长文阅读 | 舒适版心、行距与段落节奏 | ✓ |
+| 技术写作 | 代码、表格、公式与 Mermaid | ✓ |
+| 应用界面 | 文件树、目录、搜索与标签页 | ✓ |
 
-### 今日任务
+### 写作状态
 
-- [x] 完成明亮主题
-- [x] 完成深色主题
-- [x] 优化中英文混排
-- [ ] 继续听取社区反馈
+- [x] 沉浸阅读与专注写作
+- [x] 清晰的中英文混排
+- [x] 明暗主题一致体验
+- [ ] 下一篇值得认真写下的文字
 
-### 代码示例
+## 克制，但绝不简陋
+
+正文可以包含 **重点内容**、*轻量强调*、~~修订记录~~、==柔和高亮==，以及用于变量或命令的 `inline code`。链接、脚注[^1]、引用和列表拥有明确反馈，却不会抢走内容本身的注意力。
+
+> 好的主题不应成为主角。它只需要在你阅读、思考和写作时，始终待在正确的位置。
+
+### Code that belongs in the document
 
 ```typescript
 type Theme = "claude-light" | "claude-dark";
 
-function activateTheme(theme: Theme): string {
-  return `Typora theme activated: ${theme}`;
+function beginWriting(theme: Theme): string {
+  return `A calm writing space with ${theme}`;
 }
 
-console.log(activateTheme("claude-light"));
+console.log(beginWriting("claude-light"));
 ```
 
-## 数学与链接
+## 数学、图表与结构化内容
 
-行内公式 $E = mc^2$ 与独立公式都拥有清晰的排版：
+行内公式 $E = mc^2$ 与独立公式都能融入文档节奏：
 
 $$
 \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
 $$
 
-访问 [Typora](https://typora.io/) 了解更多 Markdown 写作功能。
+```mermaid
+flowchart LR
+    I[灵感] --> W[写作]
+    W --> R[阅读]
+    R --> I
+```
 
 ---
 
-愿每一次书写都专注于内容本身。
+愿界面保持安静，愿文字自然发光。
+
+[^1]: 脚注同样经过排版与交互细节优化。
