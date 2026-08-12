@@ -155,4 +155,3 @@ Typora 会在当前主题之后加载 `base.user.css` 和主题专属的用户 C
 ## 商标说明
 
 Claude 是 Anthropic, PBC 的商标。本项目是独立的社区主题，与 Anthropic 无关联，也未获得其官方授权或认可。“Claude-like”仅表示视觉与阅读体验上的灵感来源。
-

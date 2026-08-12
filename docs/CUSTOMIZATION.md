@@ -100,4 +100,3 @@ Typora 会在所选主题之后加载用户 CSS。建议把个性化设置放在
 如需恢复默认样式，只要移除对应覆盖规则即可。若要彻底排查自定义问题，可暂时重命名用户 CSS 文件并重启 Typora。
 
 [Back to README](../README.md) · [返回中文 README](../README.zh-CN.md)
-
