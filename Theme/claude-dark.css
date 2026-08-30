@@ -113,9 +113,10 @@ textarea {
     --box-shadow-userinput-hover: 0 24px 62px -28px rgb(0 0 0 / 66%), 0 10px 24px -14px rgb(0 0 0 / 48%), 0 0 0 0.5px hsla(var(--border-200) / 0.28);
     --box-shadow-userinput-focus: 0 26px 68px -28px rgb(0 0 0 / 72%), 0 12px 28px -14px rgb(0 0 0 / 54%), 0 0 0 0.5px hsla(var(--border-200) / 0.32);
     /*--- Font ---*/
-    --font-ui: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", system-ui, "Segoe UI", "Microsoft YaHei", sans-serif;
-    --font-body: var(--font-ui);
-    --font-code: "JetBrains Mono NL", "JetBrains Mono", ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    --font-ui: "Anthropic Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", system-ui, "Segoe UI", "Microsoft YaHei", sans-serif;
+    --font-serif: "Anthropic Serif", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", serif;
+    --font-body: var(--font-serif);
+    --font-code: "Anthropic Mono", "JetBrains Mono NL", "JetBrains Mono", ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     --font-sans: var(--font-ui);
     --font-mono: var(--font-code);
     --font-weight: 400;
