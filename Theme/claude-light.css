@@ -62,6 +62,7 @@ textarea {
     --hover-color: #ecece9;
     --font-color: #2d2d2b;
     --muted-font-color: #6b6b67;
+    --md-char-color: var(--muted-font-color);
     --sidebar-font-color: #4f4f4b;
 
     /* Absolutely's soft clay accent, split into decorative and readable text roles. */
@@ -459,23 +460,8 @@ body {
 /* ---------- Theme Section ---------- */
 
 /* Implementation detail */
-#write .md-pair-s.md-expand > .md-meta.md-before,
-#write .md-pair-s.md-expand > .md-meta.md-after {
-    display: inline-block !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    vertical-align: baseline !important;
-    font-size: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    opacity: 0 !important;
-}
 
 /* Implementation detail */
-#write .md-pair-s.md-expand {
-    padding: 0 !important;
-}
 
 /* Implementation detail */
 span[md-inline="highlight"] mark,
